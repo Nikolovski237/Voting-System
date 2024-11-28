@@ -1,7 +1,7 @@
 <?php include "layout/header.php"; ?>
 
 <h2>Cast Your Vote</h2>
-<form id="voteForm">
+<form id="voteForm" method="POST" action="process_vote.php">
     <label for="voter">Your Name:</label>
     <select name="voter_id" id="voter" required>
         <option value="">Select your name</option>
@@ -38,6 +38,7 @@
 
     <button type="submit">Submit Vote</button>
 </form>
+
 
 <div id="voteMessage"></div>
 
