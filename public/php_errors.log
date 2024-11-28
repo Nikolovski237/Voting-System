@@ -1,6 +1,0 @@
-[28-Nov-2024 19:17:56 Europe/Berlin] PHP Warning:  Undefined variable $db in C:\Users\Martin\Documents\XAMPP\htdocs\Voting-System\public\process_vote.php on line 11
-[28-Nov-2024 19:17:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\Martin\Documents\XAMPP\htdocs\Voting-System\models\Vote.php:15
-Stack trace:
-#0 C:\Users\Martin\Documents\XAMPP\htdocs\Voting-System\public\process_vote.php(26): Vote->castVote('1', '2', 'Makes Work Fun', 'test')
-#1 {main}
-  thrown in C:\Users\Martin\Documents\XAMPP\htdocs\Voting-System\models\Vote.php on line 15

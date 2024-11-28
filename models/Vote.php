@@ -8,17 +8,34 @@ class Vote {
     }
 
     // Cast a vote
-    public function castVote($voter_id, $nominee_id, $category, $comment) {
+    public function castVote($voter_id, $nominee_id, $category_id, $comment) {
         if ($voter_id == $nominee_id) return false; // Self-voting not allowed
-        $query = "INSERT INTO " . $this->table_name . " (voter_id, nominee_id, category, comment) 
-                  VALUES (:voter_id, :nominee_id, :category, :comment)";
+    
+        // Check if the category_id is a string (name), and retrieve the actual ID
+        if (is_string($category_id)) {
+            $category_id = $this->getCategoryIdByName($category_id);
+            if (!$category_id) {
+                return false; // Invalid category
+            }
+        }
+    
+        $query = "INSERT INTO " . $this->table_name . " (voter_id, nominee_id, category_id, comment) 
+                  VALUES (:voter_id, :nominee_id, :category_id, :comment)";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':voter_id', $voter_id);
         $stmt->bindParam(':nominee_id', $nominee_id);
-        $stmt->bindParam(':category', $category);
+        $stmt->bindParam(':category_id', $category_id); // Using category_id
         $stmt->bindParam(':comment', $comment);
-        return $stmt->execute();
+        
+        try {
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            return false;
+        }
     }
+    
+    
 
     // Get results for each category
     public function getResults() {
@@ -54,6 +71,21 @@ class Vote {
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    public function getCategoryIdByName($category_name) {
+        $query = "SELECT id FROM categories WHERE name = :name LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':name', $category_name);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+        if ($row) {
+            return $row['id']; // Return the category ID
+        } else {
+            return null; // Return null if the category does not exist
+        }
     }
 }
 
