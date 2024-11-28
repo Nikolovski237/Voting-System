@@ -1,8 +1,7 @@
 <?php
-include_once 'src/config.php';
+include_once 'config/database.php';
 
-$database = new Database();
-$conn = $database->connect();
+$db = (new Database())->getConnection();
 
 if ($conn) {
     echo "Database connection successful!";
