@@ -78,9 +78,6 @@ Follow these instructions to set up and run the Employee Appreciation Voting Sys
 #### View Results
 Navigate to the "Results" page to view voting summaries for each category.
 
-#### Generate Certificates
-Use the "Generate Certificates" feature to create certificates for category winners.
-
 ---
 
 ### User Features
@@ -103,7 +100,6 @@ Check category winners on the "Results" page.
 ---
 
 ### Notes
-- Votes cannot be submitted without a comment.
 - Employees cannot vote for themselves.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
