@@ -59,7 +59,7 @@ Follow these instructions to set up and run the Employee Appreciation Voting Sys
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/employee-voting-system.git
+   git clone https://github.com/Nikolovski237/Voting-System.git
 2. Navigate to the project directory:
     ```sh
     cd employee-voting-system
@@ -71,31 +71,46 @@ Follow these instructions to set up and run the Employee Appreciation Voting Sys
     php artisan migrate
     php artisan db:seed
 
-Usage
-Admin Features
-View Results
-Navigate to the "Results" page to view voting summaries for each category.
-Generate Certificates
-Use the "Generate Certificates" feature to create certificates for category winners.
-User Features
-Submit a Vote
-Navigate to the "Vote" page.
-Select your name as the voter.
-Choose a colleague (nominee).
-Select a recognition category:
-Makes Work Fun
-Team Player
-Culture Champion
-Difference Maker
-Add a comment.
-Submit your vote.
-View Results
-Check category winners on the "Results" page.
-Notes
-Votes cannot be submitted without a comment.
-Employees cannot vote for themselves.
-<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- LICENSE -->
-License
-Distributed under the MIT License. See LICENSE.txt for more information.
+## Usage
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> ```
+### Admin Features
+
+#### View Results
+Navigate to the "Results" page to view voting summaries for each category.
+
+#### Generate Certificates
+Use the "Generate Certificates" feature to create certificates for category winners.
+
+---
+
+### User Features
+
+#### Submit a Vote
+1. Navigate to the "Vote" page.
+2. Select your name as the voter.
+3. Choose a colleague (nominee).
+4. Select a recognition category:
+   - Makes Work Fun
+   - Team Player
+   - Culture Champion
+   - Difference Maker
+5. Add a comment.
+6. Submit your vote.
+
+#### View Results
+Check category winners on the "Results" page.
+
+---
+
+### Notes
+- Votes cannot be submitted without a comment.
+- Employees cannot vote for themselves.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
