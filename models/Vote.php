@@ -66,7 +66,6 @@ class Vote {
             INNER JOIN users u ON v.voter_id = u.id
             GROUP BY v.voter_id
             ORDER BY vote_count DESC
-            LIMIT 1
         ";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
