@@ -1,25 +1,10 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f4f4f9;
 }
 
-section {
-    padding: 50px 20px;
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: sticky;
-    bottom: 0;
-}
-
-/* Hero Section */
 .hero {
     background: linear-gradient(to bottom, #4e73df, #224abe);
     color: white;
@@ -44,9 +29,9 @@ footer {
     font-size: 1rem;
 }
 
-/* Services Section */
 .services {
     background-color: #ffffff;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -55,7 +40,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Testimonials Section */
 .testimonials {
     background-color: #f4f4f9;
     padding: 50px 20px;
@@ -63,6 +47,34 @@ footer {
 
 .testimonial {
     margin-bottom: 20px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: sticky;
+    bottom: 0;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+}
+
+/* Services Section */
+.services .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 /* Leaderboard Table */
